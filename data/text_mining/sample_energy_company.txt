@@ -1,0 +1,134 @@
+# PETRONAS GAS BERHAD - ANNUAL REPORT 2024
+# SHAREHOLDER ANALYSIS
+
+TABLE 1: TOP 20 SHAREHOLDERS AS AT 31 DECEMBER 2024
+
+| No | Shareholder Name | No. of Shares | Percentage | Type | Country |
+|----|------------------|---------------|------------|------|---------|
+| 1 | PETRONAS Capital Bhd | 5,000,000,000 | 50.00% | Direct | Malaysia |
+| 2 | Khazanah Nasional Berhad | 1,500,000,000 | 15.00% | Direct | Malaysia |
+| 3 | Employees Provident Fund | 1,000,000,000 | 10.00% | Direct | Malaysia |
+| 4 | Kumpulan Wang Simpanan Pekerja | 500,000,000 | 5.00% | Direct | Malaysia |
+| 5 | Permodalan Nasional Berhad | 300,000,000 | 3.00% | Direct | Malaysia |
+| 6 | Amanah Saham Nasional Berhad | 200,000,000 | 2.00% | Direct | Malaysia |
+| 7 | Lembaga Tabung Haji | 150,000,000 | 1.50% | Direct | Malaysia |
+| 8 | State of Johor Investment Corporation | 100,000,000 | 1.00% | Direct | Malaysia |
+| 9 | Singapore Power Ltd | 50,000,000 | 0.50% | Direct | Singapore |
+| 10 | Abu Dhabi National Energy Company | 40,000,000 | 0.40% | Direct | UAE |
+| 11 | QatarEnergy | 30,000,000 | 0.30% | Direct | Qatar |
+| 12 | Petroliam Nasional Berhad (Petronas) | 25,000,000 | 0.25% | Indirect | Malaysia |
+| 13 | Mitsubishi Corporation | 20,000,000 | 0.20% | Direct | Japan |
+| 14 | Mitsui & Co Ltd | 15,000,000 | 0.15% | Direct | Japan |
+| 15 | JERA Co Inc | 12,000,000 | 0.12% | Direct | Japan |
+| 16 | Korea Gas Corporation | 10,000,000 | 0.10% | Direct | South Korea |
+| 17 | CNPC International (Singapore) Pte Ltd | 8,000,000 | 0.08% | Direct | Singapore |
+| 18 | ExxonMobil Asia Pacific Pte Ltd | 7,000,000 | 0.07% | Direct | Singapore |
+| 19 | Shell International Petroleum Co Ltd | 6,000,000 | 0.06% | Direct | UK |
+| 20 | BP International Limited | 5,000,000 | 0.05% | Direct | UK |
+
+TOTAL ISSUED SHARE CAPITAL: 10,000,000,000 ORDINARY SHARES OF RM1.00 EACH
+
+TABLE 2: FOREIGN OWNERSHIP BREAKDOWN
+
+| Country | Shareholders | Total Percentage |
+|---------|-------------|------------------|
+| Singapore | 2 | 0.58% |
+| UAE | 1 | 0.40% |
+| Qatar | 1 | 0.30% |
+| Japan | 3 | 0.47% |
+| South Korea | 1 | 0.10% |
+| UK | 2 | 0.11% |
+| **Total Foreign** | **10** | **1.96%** |
+
+TABLE 3: GOVERNMENT OWNERSHIP
+
+| Entity | Percentage | Classification |
+|--------|------------|----------------|
+| PETRONAS Capital Bhd | 50.00% | Government-Linked Company (GLC) |
+| Khazanah Nasional Berhad | 15.00% | Sovereign Wealth Fund |
+| EPF | 10.00% | Government Agency |
+| KWAP | 5.00% | Government Agency |
+| PNB | 3.00% | Government-Linked Investment Company |
+| Amanah Saham Nasional Berhad | 2.00% | Government-Linked Unit Trust |
+| Tabung Haji | 1.50% | Government Agency |
+| State of Johor Investment Corporation | 1.00% | State Investment Corporation |
+| **Total Government** | **87.50%** | |
+
+TABLE 4: CROSS-HOLDINGS AND RELATED ENTITIES
+
+| Shareholder | Cross-Holding | Effective Control | Ultimate Owner |
+|-------------|---------------|-------------------|----------------|
+| PETRONAS Capital Bhd | 50.00% | Direct control | Petroliam Nasional Berhad (Petronas) |
+| Petroliam Nasional Berhad (Petronas) | 0.25% | Indirect influence | Malaysian Government (100%) |
+
+CROSS-HOLDING ADJUSTMENT:
+- PETRONAS Capital Bhd's 50.00% + Petronas's 0.25% = 50.25% effective government ownership
+- Petronas is 100% owned by Malaysian Government
+- Therefore, PETRONAS Capital Bhd's holding is fully government-controlled
+
+TABLE 5: OWNERSHIP BY TYPE
+
+| Ownership Type | Shareholders | Percentage |
+|----------------|-------------|------------|
+| Direct | 19 | 98.50% |
+| Indirect | 1 | 0.25% |
+| Beneficial | 0 | 0.00% |
+| **Total** | **20** | **98.75%** |
+
+TABLE 6: JOINT VENTURES AND ASSOCIATES
+
+| Joint Venture | Petronas Gas Share | Partner | Partner Share |
+|---------------|-------------------|---------|--------------|
+| Malaysia LNG Sdn Bhd | 60.00% | Shell | 40.00% |
+| MLNG Dua Sdn Bhd | 60.00% | Shell, Mitsubishi, Nippon Oil | 40.00% |
+| MLNG Tiga Sdn Bhd | 60.00% | Shell, Mitsui | 40.00% |
+| Regas Terminal (Sing) Pte Ltd | 30.00% | Singapore Power | 70.00% |
+| PNG LNG Project | 25.00% | ExxonMobil, Oil Search | 75.00% |
+
+NOTE: Joint venture interests are held directly by Petronas Gas Berhad.
+
+TABLE 7: SUBSIDIARY COMPANIES (100% OWNED)
+
+1. Petronas Gas Marketing Sdn Bhd
+2. Petronas Gas Trading Sdn Bhd
+3. Petronas Gas Engineering Sdn Bhd
+4. Petronas Gas Operations Sdn Bhd
+5. Petronas Gas Services Sdn Bhd
+
+TABLE 8: CHANGES IN SHAREHOLDINGS DURING FY2024
+
+| Shareholder | Opening | Closing | Change | Nature of Change |
+|-------------|---------|---------|--------|------------------|
+| PETRONAS Capital Bhd | 49.50% | 50.00% | +0.50% | Treasury share purchase |
+| Khazanah Nasional Berhad | 14.80% | 15.00% | +0.20% | Strategic investment |
+| EPF | 9.50% | 10.00% | +0.50% | Fund allocation |
+| KWAP | 5.20% | 5.00% | -0.20% | Portfolio rebalancing |
+| PNB | 2.80% | 3.00% | +0.20% | Unit trust growth |
+| Amanah Saham Nasional Berhad | 1.80% | 2.00% | +0.20% | Unit trust growth |
+| Tabung Haji | 1.30% | 1.50% | +0.20% | Hajj fund allocation |
+| Singapore Power Ltd | 0.40% | 0.50% | +0.10% | Strategic investment |
+| Abu Dhabi National Energy Company | 0.30% | 0.40% | +0.10% | Energy sector investment |
+
+TABLE 9: SHAREHOLDER CONCENTRATION
+
+| Concentration Level | Shareholders | Percentage |
+|---------------------|-------------|------------|
+| Top 5 shareholders | 5 | 83.00% |
+| Top 10 shareholders | 10 | 98.50% |
+| Foreign shareholders | 10 | 1.96% |
+| Government shareholders | 8 | 87.50% |
+| Malaysian shareholders | 10 | 98.04% |
+
+TABLE 10: RELATED PARTY TRANSACTIONS (RM MILLION)
+
+| Related Party | Nature of Transaction | FY2024 | FY2023 |
+|---------------|----------------------|-------|--------|
+| PETRONAS Capital Bhd | Gas supply agreements | 5,230 | 4,850 |
+| PETRONAS Capital Bhd | Joint venture contributions | 1,250 | 980 |
+| Petroliam Nasional Berhad | Management fees | 150 | 145 |
+| Khazanah Nasional Berhad | Advisory services | 45 | 42 |
+| EPF | Unit trust investments | 850 | 720 |
+
+**Report Prepared By:** Corporate Secretariat Department
+**Date:** 31 December 2024
+**Audited By:** Ernst & Young PLT

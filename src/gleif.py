@@ -37,12 +37,12 @@ def _parse_lei_record(item: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def fetch_malaysia_lei_records(max_pages: int = 50, page_size: int = 200) -> pd.DataFrame:
+def fetch_malaysia_lei_records(max_pages: int = 50, page_size: int = 200, country: str = "MY") -> pd.DataFrame:
     rows: list[dict[str, Any]] = []
 
     for page_number in range(1, max_pages + 1):
         params = {
-            "filter[entity.legalAddress.country]": "MY",
+            "filter[entity.legalAddress.country]": country,
             "page[size]": page_size,
             "page[number]": page_number,
         }
@@ -60,8 +60,8 @@ def fetch_relationships_for_lei(lei: str) -> pd.DataFrame:
     rows: list[dict[str, Any]] = []
 
     mapping = {
-        "is-directly-consolidated-by": "direct_parent",
-        "is-ultimately-consolidated-by": "ultimate_parent",
+        "direct-parent": "direct_parent",
+        "ultimate-parent": "ultimate_parent",
     }
 
     for endpoint, rel_label in mapping.items():
@@ -72,6 +72,10 @@ def fetch_relationships_for_lei(lei: str) -> pd.DataFrame:
             continue
 
         for item in payload.get("data", []):
+            # Skip if item is not a dict (some API responses return strings)
+            if not isinstance(item, dict):
+                continue
+
             attrs = item.get("attributes", {}) or {}
             relationships = item.get("relationships", {}) or {}
             start = ((relationships.get("startNode") or {}).get("data") or {})

@@ -9,9 +9,10 @@ from src.edgar import fetch_company_tickers, match_entities_to_edgar
 from src.scoring import compute_coverage_score
 
 
-def run_gleif_pull(max_relationship_entities: int = 100) -> tuple[pd.DataFrame, pd.DataFrame]:
-    entities = fetch_malaysia_lei_records()
-    save_df(entities, RAW_DIR / "gleif_malaysia_lei")
+def run_gleif_pull(max_relationship_entities: int = 100, country: str = "ID") -> tuple[pd.DataFrame, pd.DataFrame]:
+    entities = fetch_malaysia_lei_records(country=country)
+    country_name = {"ID": "indonesia", "MY": "malaysia"}.get(country, country.lower())
+    save_df(entities, RAW_DIR / f"gleif_{country_name}_lei")
 
     rels = []
     for lei in entities["lei"].dropna().unique()[:max_relationship_entities]:
@@ -23,13 +24,14 @@ def run_gleif_pull(max_relationship_entities: int = 100) -> tuple[pd.DataFrame, 
             print(f"[WARN] relationship fetch failed for {lei}: {e}")
 
     relationships = pd.concat(rels, ignore_index=True) if rels else pd.DataFrame()
-    save_df(relationships, INTERIM_DIR / "gleif_malaysia_relationships")
+    save_df(relationships, INTERIM_DIR / f"gleif_{country_name}_relationships")
     return entities, relationships
 
 
-def run_graph_and_scoring() -> pd.DataFrame:
-    entities = load_df(RAW_DIR / "gleif_malaysia_lei")
-    relationships = load_df(INTERIM_DIR / "gleif_malaysia_relationships")
+def run_graph_and_scoring(country: str = "ID") -> pd.DataFrame:
+    country_name = {"ID": "indonesia", "MY": "malaysia"}.get(country, country.lower())
+    entities = load_df(RAW_DIR / f"gleif_{country_name}_lei")
+    relationships = load_df(INTERIM_DIR / f"gleif_{country_name}_relationships")
 
     g = build_di_graph(entities, relationships)
     summary = graph_summary(g)
@@ -58,24 +60,29 @@ def run_graph_and_scoring() -> pd.DataFrame:
         summary["ticker"] = None
         summary["title"] = None
 
-    relationship_targets = relationships[["source_lei", "target_lei", "relationship_type"]].copy()
-    target_country = entities[["lei", "country_legal"]].rename(columns={"lei": "target_lei", "country_legal": "target_country"})
-    relationship_targets = relationship_targets.merge(target_country, on="target_lei", how="left")
+    # Handle empty relationships gracefully
+    if relationships.empty:
+        print("[INFO] No relationships found - skipping relationship analysis")
+        summary["foreign_parent"] = 0
+    else:
+        relationship_targets = relationships[["source_lei", "target_lei", "relationship_type"]].copy()
+        target_country = entities[["lei", "country_legal"]].rename(columns={"lei": "target_lei", "country_legal": "target_country"})
+        relationship_targets = relationship_targets.merge(target_country, on="target_lei", how="left")
 
-    foreign_parent = (
-        relationship_targets.loc[
-            relationship_targets["relationship_type"].isin(["direct_parent", "ultimate_parent"])
-            & relationship_targets["target_country"].notna()
-            & (relationship_targets["target_country"] != "MY"),
-            ["source_lei"]
-        ]
-        .drop_duplicates()
-        .assign(foreign_parent=1)
-        .rename(columns={"source_lei": "lei"})
-    )
+        foreign_parent = (
+            relationship_targets.loc[
+                relationship_targets["relationship_type"].isin(["direct_parent", "ultimate_parent"])
+                & relationship_targets["target_country"].notna()
+                & (relationship_targets["target_country"] != "MY"),
+                ["source_lei"]
+            ]
+            .drop_duplicates()
+            .assign(foreign_parent=1)
+            .rename(columns={"source_lei": "lei"})
+        )
 
-    summary = summary.merge(foreign_parent, on="lei", how="left")
-    summary["foreign_parent"] = summary["foreign_parent"].fillna(0).astype(int)
+        summary = summary.merge(foreign_parent, on="lei", how="left")
+        summary["foreign_parent"] = summary["foreign_parent"].fillna(0).astype(int)
 
     scored = compute_coverage_score(summary)
 

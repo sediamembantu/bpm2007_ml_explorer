@@ -1,0 +1,44 @@
+{
+  "overall": {
+    "precision": 12.709030100334449,
+    "recall": 100.0,
+    "f1_score": 22.55192878338279,
+    "true_positives": 38,
+    "false_positives": 261,
+    "false_negatives": 0
+  },
+  "samples": {
+    "sample_complex_malaysian_company.txt": {
+      "true_positives": 10,
+      "false_positives": 84,
+      "false_negatives": 0,
+      "precision": 10.638297872340425,
+      "recall": 100.0,
+      "f1_score": 19.23076923076923
+    },
+    "sample_telecom_company.txt": {
+      "true_positives": 10,
+      "false_positives": 103,
+      "false_negatives": 0,
+      "precision": 8.849557522123893,
+      "recall": 100.0,
+      "f1_score": 16.260162601626018
+    },
+    "sample_energy_company.txt": {
+      "true_positives": 10,
+      "false_positives": 49,
+      "false_negatives": 0,
+      "precision": 16.94915254237288,
+      "recall": 100.0,
+      "f1_score": 28.985507246376812
+    },
+    "sample_narrative_company.txt": {
+      "true_positives": 8,
+      "false_positives": 25,
+      "false_negatives": 0,
+      "precision": 24.242424242424242,
+      "recall": 100.0,
+      "f1_score": 39.02439024390244
+    }
+  }
+}

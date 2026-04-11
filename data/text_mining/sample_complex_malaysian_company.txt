@@ -1,0 +1,173 @@
+# RHB BANK BERHAD - ANNUAL REPORT 2024
+# SHAREHOLDERS AND OWNERSHIP STRUCTURE
+
+## 1. TOP 10 SHAREHOLDERS
+
+As at 31 December 2024, the top 10 shareholders of RHB Bank Berhad are:
+
+1. Employees Provident Fund (EPF) - 35.25%
+2. Kumpulan Wang Simpanan Pekerja (KWAP) - 12.50%
+3. Khazanah Nasional Berhad - 10.00%
+4. Kuwait Finance House (Malaysia) Berhad - 8.75%
+5. Singapore Holdings Pte Ltd - 6.25%
+6. Global Investment Management Inc - 5.50%
+7. Permodalan Nasional Berhad (PNB) - 4.80%
+8. Lembaga Tabung Haji - 3.20%
+9. Amanah Saham Nasional Berhad - 2.15%
+10. Rizal Merchant Bankers Berhad - 1.80%
+
+## 2. SUBSTANTIAL SHAREHOLDERS (5% and above)
+
+The following substantial shareholders hold more than 5% of the issued share capital:
+
+### Employees Provident Fund (EPF) - 35.25%
+
+The Employees Provident Fund holds 35.25% of the issued share capital through direct and indirect interests.
+- Direct interest: 28.50%
+- Indirect interest through unit trusts: 6.75%
+
+**Beneficial Owner:** Malaysian Government (through Ministry of Finance)
+
+### Kumpulan Wang Simpanan Pekerja (KWAP) - 12.50%
+
+KWAP holds 12.50% of the issued share capital as a direct investment on behalf of the Malaysian Government.
+
+**Type:** Direct Investment
+**Beneficial Owner:** Malaysian Government
+
+### Khazanah Nasional Berhad - 10.00%
+
+Khazanah Nasional Berhad holds 10.00% as a strategic sovereign investment.
+
+**Type:** Direct Investment
+**Ownership Classification:** Government-Linked Investment Company (GLIC)
+
+### Kuwait Finance House (Malaysia) Berhad - 8.75%
+
+Kuwait Finance House (Malaysia) Berhad holds 8.75% of the issued share capital.
+- Direct interest: 8.75%
+
+**Type:** Direct Investment
+**Ultimate Parent:** Kuwait Finance House (KFH), Kuwait
+**Classification:** Foreign Direct Investment (FDI)
+
+## 3. FOREIGN OWNERSHIP
+
+Total foreign ownership: 18.00%
+
+### Singapore-Based Shareholders: 6.25%
+- Singapore Holdings Pte Ltd: 6.25% (direct)
+  - Ultimate Parent: Singapore Government Investment Corporation Pte Ltd
+  - Type: Direct Investment from Singapore
+
+### Other Foreign Shareholders: 11.75%
+- Global Investment Management Inc (USA): 5.50% (direct)
+- HSBC Trustee (Jersey) Limited: 3.00% (beneficial)
+- Nominee Services (Cayman) Ltd: 1.85% (beneficial)
+- International Capital Partners Ltd (UK): 1.40% (direct)
+
+## 4. GOVERNMENT-OWNED ENTITIES
+
+Total government ownership: 65.80%
+
+### Direct Government Holdings: 57.75%
+- Employees Provident Fund (EPF): 35.25%
+- Kumpulan Wang Simpanan Pekerja (KWAP): 12.50%
+- Khazanah Nasional Berhad: 10.00%
+
+### Government-Linked Holdings: 8.05%
+- Permodalan Nasional Berhad (PNB): 4.80%
+- Amanah Saham Nasional Berhad: 2.15%
+- Lembaga Tabung Haji: 3.20%
+
+## 5. OWNERSHIP TYPE CLASSIFICATION
+
+### Direct Ownership: 76.50%
+1. Employees Provident Fund (EPF) - 28.50%
+2. Kumpulan Wang Simpanan Pekerja (KWAP) - 12.50%
+3. Khazanah Nasional Berhad - 10.00%
+4. Kuwait Finance House (Malaysia) Berhad - 8.75%
+5. Singapore Holdings Pte Ltd - 6.25%
+6. Global Investment Management Inc - 5.50%
+7. Permodalan Nasional Berhad (PNB) - 4.80%
+8. Lembaga Tabung Haji - 3.20%
+9. Amanah Saham Nasional Berhad - 2.15%
+10. Rizal Merchant Bankers Berhad - 1.80%
+
+### Indirect Ownership: 6.75%
+- Employees Provident Fund (EPF) through unit trusts: 6.75%
+
+### Beneficial Ownership: 4.85%
+- HSBC Trustee (Jersey) Limited: 3.00%
+- Nominee Services (Cayman) Ltd: 1.85%
+
+## 6. RELATED PARTY TRANSACTIONS
+
+The Group has related party transactions with the following substantial shareholders:
+
+### Khazanah Nasional Berhad
+- Ownership: 10.00%
+- Relationship: Substantial shareholder
+- Nature of transactions: Advisory services, cross-selling opportunities
+
+### Kuwait Finance House (Malaysia) Berhad
+- Ownership: 8.75%
+- Relationship: Substantial shareholder
+- Nature of transactions: Islamic banking product development
+
+## 7. CHANGES IN SHAREHOLDINGS DURING THE YEAR
+
+Major changes in substantial shareholdings during the financial year ended 31 December 2024:
+
+1. EPF increased its holding from 34.50% to 35.25% (+0.75%)
+2. Kuwait Finance House (Malaysia) Berhad reduced from 9.25% to 8.75% (-0.50%)
+3. Singapore Holdings Pte Ltd increased from 5.75% to 6.25% (+0.50%)
+
+## 8. SHAREHOLDER DISTRIBUTION BY TYPE
+
+| Shareholder Type | Number | Percentage |
+|------------------|--------|------------|
+| Government Entities | 4 | 57.75% |
+| Government-Linked Companies | 3 | 8.05% |
+| Foreign Entities | 4 | 18.00% |
+| Malaysian Corporates | 8 | 12.50% |
+| Individuals (Top 100) | 87 | 3.70% |
+| **Total** | **106** | **100.00%** |
+
+## 9. SUBSIDIARY OWNERSHIP STRUCTURE
+
+### Major Subsidiaries (100% owned by RHB Bank Berhad)
+1. RHB Islamic Bank Berhad
+2. RHB Investment Bank Berhad
+3. RHB Asset Management Sdn Bhd
+4. RHB Insurance Berhad
+5. RHB Securities Sdn Bhd
+
+### Joint Ventures
+1. RHB-Epsilon Asset Management Sdn Bhd (51% owned)
+   - Partner: Epsilon Capital Sdn Bhd (49%)
+2. RHB Sakura Islamic Bank (60% owned)
+   - Partner: Sakura Bank, Japan (40%)
+
+## 10. CORPORATE STRUCTURE
+
+RHB Bank Berhad is ultimately owned by a consortium of Malaysian government entities and foreign investors:
+
+Ultimate Ownership Chain:
+```
+Malaysian Government (57.75%)
+├── Employees Provident Fund (35.25%)
+├── Kumpulan Wang Simpanan Pekerja (12.50%)
+└── Khazanah Nasional Berhad (10.00%)
+
+Foreign Investors (18.00%)
+├── Kuwait Finance House, Kuwait (8.75%)
+├── Singapore GIC, Singapore (6.25%)
+├── Global Investment Management Inc, USA (5.50%)
+└── Other foreign entities (1.50%)
+```
+
+**Total Shareholding Analyzed:** 100.00%
+**Date of Analysis:** 31 December 2024
+**Prepared by:** Corporate Secretariat Department
+**Approved by:** Board of Directors
