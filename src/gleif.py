@@ -1,15 +1,59 @@
 from __future__ import annotations
 
 import pandas as pd
+from collections.abc import Iterable
 from typing import Any
 from src.utils import get_json, HTTPFetchError
 from config import GLEIF_BASE, USER_AGENT
 
 HEADERS = {"User-Agent": USER_AGENT}
 
+ENTITY_COLUMNS = [
+    "lei",
+    "legal_name",
+    "other_names",
+    "transliterated_other_names",
+    "category",
+    "legal_form",
+    "entity_status",
+    "registered_at",
+    "last_update_at",
+    "country_legal",
+    "city_legal",
+    "country_hq",
+    "city_hq",
+]
+
+RELATIONSHIP_COLUMNS = [
+    "source_lei",
+    "target_lei",
+    "relationship_type",
+    "relationship_status",
+    "accounting_standard",
+    "period_end",
+    "valid_from",
+    "valid_to",
+]
+
+
+def normalize_entity_records(df: pd.DataFrame) -> pd.DataFrame:
+    return df.reindex(columns=ENTITY_COLUMNS)
+
+
+def normalize_relationship_records(df: pd.DataFrame) -> pd.DataFrame:
+    return df.reindex(columns=RELATIONSHIP_COLUMNS)
+
 
 def fetch_lei_page(params: dict[str, Any]) -> dict[str, Any]:
     return get_json(f"{GLEIF_BASE}/lei-records", params=params, headers=HEADERS)
+
+
+def fetch_lei_record(lei: str) -> dict[str, Any] | None:
+    payload = get_json(f"{GLEIF_BASE}/lei-records/{lei}", headers=HEADERS, allow_404=True)
+    item = payload.get("data")
+    if not item:
+        return None
+    return _parse_lei_record(item)
 
 
 def _parse_lei_record(item: dict[str, Any]) -> dict[str, Any]:
@@ -53,15 +97,37 @@ def fetch_malaysia_lei_records(max_pages: int = 50, page_size: int = 200) -> pd.
 
         rows.extend(_parse_lei_record(item) for item in data)
 
-    return pd.DataFrame(rows).drop_duplicates(subset=["lei"])
+    return normalize_entity_records(pd.DataFrame(rows)).dropna(subset=["lei"]).drop_duplicates(subset=["lei"])
+
+
+def fetch_lei_records_by_lei(leis: Iterable[str]) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for lei in leis:
+        if pd.isna(lei):
+            continue
+        lei_str = str(lei).strip()
+        if not lei_str or lei_str in seen:
+            continue
+        seen.add(lei_str)
+        try:
+            record = fetch_lei_record(lei_str)
+        except HTTPFetchError as e:
+            print(f"[WARN] LEI fetch failed for {lei_str}: {e}")
+            continue
+        if record:
+            rows.append(record)
+
+    return normalize_entity_records(pd.DataFrame(rows)).dropna(subset=["lei"]).drop_duplicates(subset=["lei"])
 
 
 def fetch_relationships_for_lei(lei: str) -> pd.DataFrame:
     rows: list[dict[str, Any]] = []
 
     mapping = {
-        "is-directly-consolidated-by": "direct_parent",
-        "is-ultimately-consolidated-by": "ultimate_parent",
+        "direct-parent-relationship": "direct_parent",
+        "ultimate-parent-relationship": "ultimate_parent",
     }
 
     for endpoint, rel_label in mapping.items():
@@ -71,21 +137,27 @@ def fetch_relationships_for_lei(lei: str) -> pd.DataFrame:
         except HTTPFetchError:
             continue
 
-        for item in payload.get("data", []):
-            attrs = item.get("attributes", {}) or {}
-            relationships = item.get("relationships", {}) or {}
-            start = ((relationships.get("startNode") or {}).get("data") or {})
-            end = ((relationships.get("endNode") or {}).get("data") or {})
+        item = payload.get("data")
+        if not item or not isinstance(item, dict):
+            continue
 
-            rows.append({
-                "source_lei": start.get("id"),
-                "target_lei": end.get("id"),
-                "relationship_type": rel_label,
-                "relationship_status": attrs.get("relationshipStatus"),
-                "accounting_standard": attrs.get("accountingStandard"),
-                "period_end": attrs.get("periodEnd"),
-                "valid_from": attrs.get("validFrom"),
-                "valid_to": attrs.get("validTo"),
-            })
+        attrs = item.get("attributes", {}) or {}
+        rel = attrs.get("relationship", {}) or {}
+        start = rel.get("startNode", {}) or {}
+        end = rel.get("endNode", {}) or {}
 
-    return pd.DataFrame(rows)
+        periods = rel.get("periods") or []
+        latest_period = periods[-1] if periods else {}
+
+        rows.append({
+            "source_lei": start.get("id"),
+            "target_lei": end.get("id"),
+            "relationship_type": rel_label,
+            "relationship_status": rel.get("status"),
+            "accounting_standard": latest_period.get("accountingStandard"),
+            "period_end": latest_period.get("endDate"),
+            "valid_from": attrs.get("validFrom"),
+            "valid_to": attrs.get("validTo"),
+        })
+
+    return normalize_relationship_records(pd.DataFrame(rows))
